@@ -1,0 +1,4 @@
+#!/bin/bash -x
+fourthNum=$((RANDOM % 90 + 10 ))
+echo $fourthNum
+ 

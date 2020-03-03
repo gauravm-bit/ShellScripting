@@ -1,0 +1,10 @@
+Indentify files which have been modified more than 7 days
+
+find -user root -mtime +7
+
+Move these files to backup folder 
+list=$(find -user root -mtime +7)
+for var in $list
+  do
+    mv $var /home/admin/backup
+done

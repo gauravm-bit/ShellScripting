@@ -1,0 +1,11 @@
+1)view access.log files
+a)cat access.log
+
+2) print urls with timestamps
+cat access.log | awk '{print$4""$15}'
+
+3)sort urls and count it 
+ cat access.log | awk '{print$4""$15}' | sort -rn | uniq -c
+4)print 4 unique urls 
+  cat access.log | awk '{print$4""$15}' | sort -rn | uniq -c | head -4
+

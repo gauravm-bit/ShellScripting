@@ -1,0 +1,16 @@
+ 
+1) getting date in this format
+date +%d%m%Y
+29022020
+
+2)separating basename and extention
+
+for file in *.1
+> do
+> found=`echo $file | awk -F. '{print $1}'`;
+> echo $found
+> done
+abc
+def
+ghi
+mno

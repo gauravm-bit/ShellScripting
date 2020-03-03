@@ -1,0 +1,26 @@
+1) view access.log
+cat access.log
+
+2)Print field which has urls data
+~/Desktop/deagle/linux-content$ cat access.log | awk '{print $15}'
+
+3)sort extracted urls and count it
+/Desktop/deagle/linux-content$ cat access.log | awk '{print $15}' | sort -nr | uniq -c
+    202 10.0;
+    358 8.0.0;
+      7 6.1;
+     18 6.0;
+      1 4.4.3;
+     98 4.4.2;
+   2371 x86_64)
+     59 Mobile;
+     11 Linux
+      2 +info@netcraft.com)"
+     74 +http://www.google.com/bot.html)"
+      6 http://cloudsystemnetworks.com)"
+      3 
+4)Print 4 unique URLS
+ cat access.log | awk '{print $15}' | sort | uniq -c | sort -nr | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*" | sort -u
+http://cloudsystemnetworks.com
+http://www.google.com/bot.html
+

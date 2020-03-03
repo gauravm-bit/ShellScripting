@@ -1,0 +1,37 @@
+1) create files
+2) Print list
+3) Seperate basename and extension 
+4)create a folder using basename
+5)Move file into newly created folder
+6)Iterate same steps for all files
+
+
+
+
+
+admin1@admin1-H110M-H:~/Desktop/Shell Scripting/First PDF/Second Problem$ touch abc.txt def.txt ghi.txt jkl.txt
+admin1@admin1-H110M-H:~/Desktop/Shell Scripting/First PDF/Second Problem$ ls
+abc.txt  commands.txt  def.txt	ghi.txt  jkl.txt
+admin1@admin1-H110M-H:~/Desktop/Shell Scripting/First PDF/Second Problem$ mkdir abc def ghi jkl
+admin1@admin1-H110M-H:~/Desktop/Shell Scripting/First PDF/Second Problem$ mv abc.txt abc
+admin1@admin1-H110M-H:~/Desktop/Shell Scripting/First PDF/Second Problem$ mv def.txt def
+admin1@admin1-H110M-H:~/Desktop/Shell Scripting/First PDF/Second Problem$ mv ghi.txt ghi
+admin1@admin1-H110M-H:~/Desktop/Shell Scripting/First PDF/Second Problem$ mv jkl.txt jkl
+admin1@admin1-H110M-H:~/Desktop/Shell Scripting/First PDF/Second Problem$ ls
+abc  commands.txt  def	ghi  jkl
+admin1@admin1-H110M-H:~/Desktop/Shell Scripting/First PDF/Second Problem$
+
+
+segregate filename and extention 
+
+-> for file in *.txt
+> do
+> found=`echo $file | awk -F. '{print $1}'`;
+> echo $found
+> done
+abc
+commands
+def
+ghi
+
+

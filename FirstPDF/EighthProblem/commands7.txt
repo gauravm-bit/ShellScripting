@@ -1,0 +1,17 @@
+1) view access.log file
+ cat access.log
+
+2)print ip field
+ cat access.log | awk '{print $1}'
+
+3) sort ips and count it
+ cat access.log | awk '{print $1}' | sort -nr | uniq -c
+
+4)print 4 unique urls
+
+ cat access.log | awk '{print $1}' | sort -nr | uniq -c | head -4
+    186 10.56.9.3
+    285 10.56.6.4
+    168 10.56.5.2
+     40 10.56.46.2
+
