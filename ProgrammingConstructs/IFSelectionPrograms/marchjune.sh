@@ -11,15 +11,15 @@ then
 			if [ $date -le 31 ]
 			then
 			echo true;
-         else
-         echo false;
+		        else
+        		echo false;
 			fi;
 		else
 		echo false;
 		fi;
 	else
 		if [ $month -le 6 ]
-   	then
+   		then
 			if [ $month -eq 6 ]
 			then
 				if [ $date -le 20 ]
@@ -28,14 +28,14 @@ then
 				else
 				echo false;
 				fi;
-		   else
+	  	        else
 				if [ $date -le 31 ]
 				then
 				echo true;
 				else
 				echo false;
 				fi;
- 		   fi;
+ 			fi;
 		else
 		echo false;
 		fi;
